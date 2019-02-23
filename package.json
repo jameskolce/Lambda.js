@@ -1,0 +1,31 @@
+{
+  "name": "@jameskolce/lambda.js",
+  "version": "0.1.0",
+  "description": "Collection of Functions and Functional Forms in JavaScript",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc --declaration",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jameskolce/Lambda.js.git"
+  },
+  "keywords": [
+    "algorithms",
+    "utility",
+    "functions",
+    "functional forms"
+  ],
+  "author": "James Kolce <contact@jameskolce.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jameskolce/Lambda.js/issues"
+  },
+  "homepage": "https://github.com/jameskolce/Lambda.js#readme",
+  "devDependencies": {
+    "@types/node": "^10.12.10",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.1.6"
+  }
+}
