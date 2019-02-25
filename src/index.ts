@@ -11,9 +11,9 @@ export const ff = {
   mapFromLast: (xs: Array<any>, f: (current: any, previous: any) => any, seed: any = false): Array<any> => {
     if (!xs[0]) return []
 
-    const result = f(xs[0], seed)
+    const application = f(xs[0], seed)
 
-    return [ result ].concat(ff.mapFromLast(xs.slice(1), f, result))
+    return [ application ].concat(ff.mapFromLast(xs.slice(1), f, application))
   }
 }
 
