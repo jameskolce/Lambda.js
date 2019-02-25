@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc --declaration",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "test": "ts-node node_modules/@jameskolce/spec.js/dist/bin src"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
   },
   "homepage": "https://github.com/jameskolce/Lambda.js#readme",
   "devDependencies": {
+    "@jameskolce/spec.js": "^0.1.0",
     "@types/node": "^10.12.10",
     "ts-node": "^7.0.1",
     "typescript": "^3.1.6"
