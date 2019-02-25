@@ -1,6 +1,6 @@
 {
   "name": "@jameskolce/lambda.js",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Collection of Functions and Functional Forms in JavaScript",
   "main": "dist/index.js",
   "scripts": {
