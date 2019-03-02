@@ -11,9 +11,17 @@ export const ff = {
   mapFromLast: (xs: Array<any>, f: (current: any, previous: any) => any, seed: any = false): Array<any> => {
     if (!xs[0]) return []
 
-    const application = f(xs[0], seed)
+    const apply = f(xs[0], seed)
 
-    return [ application ].concat(ff.mapFromLast(xs.slice(1), f, application))
+    return [ apply ].concat(ff.mapFromLast(xs.slice(1), f, apply))
+  },
+
+  mapFromLastAsync: async (xs: Array<any>,  f: (current: any, previous: any) => Promise<any>, seed: Promise<any> = Promise.resolve(false)) => {
+    if (!xs[0]) return []
+
+    const apply = await f(xs[0], await seed)
+
+    return Promise.all([ apply ].concat(await ff.mapFromLastAsync(xs.slice(1), f, apply)))
   }
 }
 
